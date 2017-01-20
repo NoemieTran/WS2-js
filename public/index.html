@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>CSS/HTML Workshop with Drivy</title>
+    <link href="CarRental.css" media="screen,projection" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="car">
+    <h1> FORM </h1>
+    <h5> Car Model :</h5>
+      <input class="model" type="text" placeholder="Car model"/>
+    <h5> Price by day :</h5>
+      <input class="price-by-day" type="number" placeholder="Price by day"/>    
+    <h5> Price by km :</h5>
+      <input class="price-by-km" type="number" placeholder="Price by km"/>
+    </div>
+    <div id="rental">   
+    <h5> Begin Date :</h5>
+      <input class="begin" type="date" placeholder="Rental begin date"/>  
+    <h5> End Date :</h5>
+      <input class="end" type="date" placeholder="Rental end date"/>  
+    <h5> Distance in km :</h5>
+      <input class="distance" type="number" placeholder="Distance in km"/>   
+    <h5> Deducible Option :</h5>
+      <input class="option" type="checkbox" placeholder="Deductible option"/>
+    </div>
+    <br>
+    <button id="compute">Compute</button>
+    </br>
+    <div id="actors"></div>
+    <script id="template" type="x-tmpl-mustache">
+      {{#actors}}
+        <div class="actor">
+          <span>{{who}}</span>
+          <span>{{type}}</span>
+          <span>{{amount}}</span>
+        </div>
+      {{/actors}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="drivy.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
